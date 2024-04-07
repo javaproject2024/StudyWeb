@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  // max-width: 1170px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.home-h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.swiper-container-pointer-events {
+  touch-action: pan-y;
+}
+.swiper-wrapper {
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.ant-list-pagination {
+  display: flex;
+  justify-content: center;
+}

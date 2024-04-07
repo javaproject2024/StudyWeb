@@ -1,0 +1,36 @@
+.footer-wrapper {
+  border-top: 1px solid #e7eaf3;
+  background-color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  background-image: url(/static/img/footer.webp);
+  background-position: bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-right: 0.775rem;
+  padding-left: 0.775rem;
+}
+.footer-copyright {
+  color: #677788;
+  font-size: 0.95rem;
+}
+.grow0 {
+  flex-grow: 0;
+}
+.footer-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.link-title a {
+  text-decoration: none;
+  background-color: transparent;
+  color: #677788;
+}
