@@ -37,7 +37,7 @@ export default function OTPAutthentication() {
           <p className="mb-5">
             Please enter the OTP number
             from your email to active
-            account
+            account fghfghfghfg
           </p>
 
           <Form
