@@ -13,15 +13,50 @@ import {
   Link,
   useNavigate,
 } from "react-router-dom";
+import {
+  useRef,
+  useState,
+} from "react";
 
 function Login() {
+  const [data, setData] = useState("");
+  console.log(data);
+  // const form = useRef(null);
   const navigate = useNavigate();
-  const onFinish = (values: never) => {
+
+  const onFinish = async (
+    values: never,
+  ) => {
     console.log(
       "Received values of form: ",
       values,
     );
-    navigate("/");
+    const { username, password } =
+      values;
+    const body = { username, password };
+    // const data = new FormData();
+
+    // data.append("username", username);
+    // data.append("password", password);
+    // console.log(data.entries());
+    // console.log(data.values());
+    // console.log(data);
+
+    await fetch(
+      "http://localhost:8080/api/v1/web/signin",
+      {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(body),
+        headers: {
+          "Content-Type":
+            // "application/json",
+            "multipart/form-data",
+        },
+      },
+    );
+
+    // navigate("/");
   };
 
   return (
@@ -36,6 +71,7 @@ function Login() {
             continue
           </p>
           <Form
+            // ref={form}
             // name="normal_login"
             className="login-form"
             initialValues={{
