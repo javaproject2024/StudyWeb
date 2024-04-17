@@ -38,45 +38,44 @@ function NavBar() {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link"
-                href="#"
+                to=""
               >
                 Khoá học online
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link "
-                aria-current="page"
-                href="#"
+                to={PATH.TEST_PATH}
               >
                 Đề thi online
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link"
-                href="#"
+                to=""
               >
                 Flagcards
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link"
-                href="#"
+                to=""
               >
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link "
-                href="#"
+                to=""
               >
                 Kích hoạt khoá học
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link

@@ -1,4 +1,6 @@
 import { Card, List } from "antd";
+import { Link } from "react-router-dom";
+import * as PATH from "@/configs/routeConfig.tsx";
 
 const data = [
   {
@@ -70,9 +72,16 @@ function CourseItems() {
       dataSource={data}
       renderItem={(item) => (
         <List.Item>
-          <Card title={item.title}>
-            Card content
-          </Card>
+          <Link
+            to={PATH.TEST_PATH_TITLE_ID.replace(
+              ":id",
+              item.title,
+            )}
+          >
+            <Card title={item.title}>
+              Card content
+            </Card>
+          </Link>
         </List.Item>
       )}
     />

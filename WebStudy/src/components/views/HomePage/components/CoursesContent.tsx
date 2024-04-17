@@ -38,10 +38,8 @@ type ItemProps = {
   content: string;
   description: string;
 };
-
-const ContentStyle: React.CSSProperties = styled(
-  List,
-)`
+// : React.CSSProperties
+const ContentStyle = styled(List)`
   .ant-list-items {
     display: flex;
     justify-content: center;
@@ -85,16 +83,16 @@ const CoursesContent = () => (
       xs: 1,
       sm: 1,
       md: 3,
-      lg: 3,
-      xl: 3,
-      xxl: 3,
+      lg: 6,
+      xl: 6,
+      xxl: 6,
     }}
     split={false}
     pagination={{
       onChange: (page: ReactNode) => {
         console.log(page);
       },
-      pageSize: 3,
+      pageSize: 6,
     }}
     dataSource={data}
     // footer={

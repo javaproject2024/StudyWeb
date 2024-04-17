@@ -20,9 +20,10 @@ import {
 
 function Login() {
   const [data, setData] = useState("");
+  const [form] = Form.useForm();
   console.log(data);
   // const form = useRef(null);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const onFinish = async (
     values: never,
@@ -31,10 +32,11 @@ function Login() {
       "Received values of form: ",
       values,
     );
-    const { username, password } =
-      values;
-    const body = { username, password };
-    // const data = new FormData();
+    // const { username, password } =
+    //   values;
+    // const body = { username, password };
+    // const formData = new FormData();
+    // console.log(formData);
 
     // data.append("username", username);
     // data.append("password", password);
@@ -47,11 +49,11 @@ function Login() {
       {
         method: "POST",
         mode: "no-cors",
-        body: JSON.stringify(body),
+        body: JSON.stringify(values),
         headers: {
           "Content-Type":
-            // "application/json",
-            "multipart/form-data",
+            "application/json",
+          // "multipart/form-data",
         },
       },
     );
@@ -72,7 +74,7 @@ function Login() {
           </p>
           <Form
             // ref={form}
-            // name="normal_login"
+            name="normal_login"
             className="login-form"
             // initialValues={{
             //   remember: true,
