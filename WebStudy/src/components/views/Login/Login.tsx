@@ -26,7 +26,7 @@ function Login() {
   // const navigate = useNavigate();
 
   const onFinish = async (
-    values: never,
+    values: any,
   ) => {
     console.log(
       "Received values of form: ",
@@ -79,6 +79,7 @@ function Login() {
             // initialValues={{
             //   remember: true,
             // }}
+            form={form}
             onFinish={onFinish}
           >
             <Form.Item
