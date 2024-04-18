@@ -7,3 +7,5 @@ export const TEST_PATH_TITLE =
   "/:title";
 export const TEST_PATH_TITLE_ID =
   "/:id/edit";
+export const PRACTICE_PATH =
+  "/practice";

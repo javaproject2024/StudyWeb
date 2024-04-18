@@ -1,4 +1,5 @@
 import CourseOptionDetails from "@/components/views/Courses/CourseOptionDetails";
+import PracticePage from "@/components/views/Courses/PracticePage";
 import Footer from "@/components/views/Footer/Footer";
 import HomePage from "@/components/views/HomePage/HomePage";
 import Login from "@/components/views/Login/Login";
@@ -50,6 +51,10 @@ function AllRoutes() {
           element={
             <CourseOptionDetails />
           }
+        />
+        <Route
+          path={PATH.PRACTICE_PATH}
+          element={<PracticePage />}
         />
       </Routes>
       <Footer />
